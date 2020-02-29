@@ -33,7 +33,7 @@ const useStyles = makeStyles(theme => ({
 
 let Portfolio = () => {
     const classes = useStyles();
-    const [expanded, setExpanded] = React.useState(false);
+    const [expanded, setExpanded] = React.useState('weather');
 
     const handleChange = panel => (event, isExpanded) => {
         setExpanded(isExpanded ? panel : false);
@@ -41,7 +41,7 @@ let Portfolio = () => {
 
     return (
         <div className={classes.root}>
-            <ExpansionPanel defaultExpanded={true} expanded={expanded === 'weather'} onChange={handleChange('weather')}>
+            <ExpansionPanel expanded={expanded === 'weather'} onChange={handleChange('weather')}>
                 <ExpansionPanelSummary
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="weather"

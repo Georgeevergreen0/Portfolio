@@ -71,10 +71,9 @@ const Home = (props) => {
                 <div className={classes.body}>
                     <Typography paragraph style={{ fontWeight: "bolder" }} variant="h2">GEORGE</Typography>
                     <Typography paragraph >Hi, my name is Evergreen George Ekene but you can call me Eky. </Typography>
-                    <Typography paragraph >I am a Software Engineer based in Lagos, Nigeria and I am very passionate about education, technology & music.</Typography>
+                    <Typography paragraph >I am a web developer, open source advocate and technical writer based in Anambra, Nigeria and I am very passionate about education, technology & music.</Typography>
                     <Typography paragraph >
-                        I am a Software Engineer based in Lagos, Nigeria and I am very passionate about education, technology & music.
-                         Need pictures or my bio for a feature or speaker graphics? {<NavLink to="/about" >Click here</NavLink>}
+                        Need pictures or more about my bio ? {<NavLink to="/about" >Click here</NavLink>}
                     </Typography>
                 </div>
                 <div className={classes.image}></div>

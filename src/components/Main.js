@@ -67,7 +67,7 @@ let Main = (props) => {
         return (
             <div className={classes.body}>
                 <Drawer {...props} />
-                <AppBar position="sticky" color="inherit">
+                <AppBar position="relative" color="inherit">
                     <Toolbar disableGutters>
                         <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu" onClick={toggleDrawer}>
                             <MenuIcon fontSize="large" />
