@@ -104,7 +104,7 @@ let Main = (props) => {
                     <Route path="/contact">
                         <Contact />
                     </Route>
-                    <Redirect to="/dd" />
+                    <Redirect to="/" />
                 </Switch>
             </div>
         )

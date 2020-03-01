@@ -69,7 +69,7 @@ const Home = (props) => {
                     </IconButton>
                 </div>
                 <div className={classes.body}>
-                    <Typography paragraph style={{ fontWeight: "bolder" }} variant="h2">GEORGE</Typography>
+                    <Typography paragraph style={{ fontWeight: "bolder" }} variant="h2">Hi, I'm George</Typography>
                     <Typography paragraph >Hi, my name is Evergreen George Ekene but you can call me Eky. </Typography>
                     <Typography paragraph >I am a web developer, open source advocate and technical writer based in Anambra, Nigeria and I am very passionate about education, technology & music.</Typography>
                     <Typography paragraph >
