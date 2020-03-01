@@ -30,7 +30,10 @@ const useStyles = makeStyles((theme) => ({
         padding: theme.spacing(5),
         textAlign: "center",
     },
-    spacing: theme.mixins.toolbar
+    spacing: theme.mixins.toolbar,
+    snackbar: {
+        backgroundColor: theme.palette.primary.main
+    }
 }))
 
 
@@ -52,7 +55,7 @@ const Contact = () => {
             let response = await fetch(form.action, {
                 method: form.method,
                 headers: {
-                    "content-type": "application/json"
+                    "Accept": "application/json"
                 },
                 body: data,
             })
@@ -84,23 +87,23 @@ const Contact = () => {
                 <form action="https://formspree.io/xgevdqwv" method="POST" onSubmit={submitHandler}>
                     <Grid container spacing={2}>
                         <Grid item xs={12} sm={6}>
-                            <TextField InputProps={{ endAdornment: (<InputAdornment position="end"><AccountCircle /></InputAdornment>) }}
-                                required id="firstName" fullWidth name="firstName" variant="outlined" placeholder="First Name" />
+                            <TextField InputProps={{ endAdornment: (<InputAdornment position="end"><AccountCircle color="primary" /></InputAdornment>) }}
+                                required autoComplete="on" id="firstName" fullWidth name="firstName" variant="outlined" placeholder="First Name" />
                         </Grid>
                         <Grid item xs={12} sm={6}>
-                            <TextField InputProps={{ endAdornment: (<InputAdornment position="end"><AccountCircle /></InputAdornment>) }}
-                                required id="lastName" fullWidth name="lastName" variant="outlined" placeholder="Last Name" />
+                            <TextField InputProps={{ endAdornment: (<InputAdornment position="end"><AccountCircle color="primary" /></InputAdornment>) }}
+                                required autoComplete="on" id="lastName" fullWidth name="lastName" variant="outlined" placeholder="Last Name" />
                         </Grid>
                         <Grid item xs={12}>
-                            <TextField InputProps={{ endAdornment: (<InputAdornment position="end"><LocalPostOffice /></InputAdornment>) }}
-                                required type="email" id="email" fullWidth name="email" variant="outlined" placeholder="Email" />
+                            <TextField InputProps={{ endAdornment: (<InputAdornment position="end"><LocalPostOffice color="primary" /></InputAdornment>) }}
+                                required autoComplete="on" type="email" id="email" fullWidth name="email" variant="outlined" placeholder="Email" />
                         </Grid>
                         <Grid item xs={12}>
-                            <TextField InputProps={{ endAdornment: (<InputAdornment position="end"><Chat /></InputAdornment>) }}
-                                required id="subject" fullWidth name="subject" variant="outlined" placeholder="Subject" />
+                            <TextField InputProps={{ endAdornment: (<InputAdornment position="end"><Chat color="primary" /></InputAdornment>) }}
+                                required autoComplete="on" id="subject" fullWidth name="subject" variant="outlined" placeholder="Subject" />
                         </Grid>
                         <Grid item xs={12}>
-                            <TextField required id="message" rows={8} rowsMax={10} multiline fullWidth name="message" variant="outlined" placeholder="Hello George..." />
+                            <TextField required autoComplete="on" id="message" rows={8} rowsMax={10} multiline fullWidth name="message" variant="outlined" placeholder="Hello George..." />
                         </Grid>
                         <Grid item xs={12}>
                             <Button disabled={loading} type="submit" color="primary" size="large" fullWidth variant="contained" >
@@ -114,7 +117,7 @@ const Contact = () => {
                         </Grid>
                     </Grid>
                 </form>
-                <Snackbar open={snackbarState} message={message} autoHideDuration={3000} onClose={setSnackbar.bind(this, false)}
+                <Snackbar ContentProps={{ className: classes.snackbar }} open={snackbarState} message={message} autoHideDuration={3000} onClose={setSnackbar.bind(this, false)}
                     action={<IconButton size="small" aria-label="close" color="inherit" onClick={setSnackbar.bind(this, false)}>
                         <CloseIcon fontSize="small" />
                     </IconButton>} />
