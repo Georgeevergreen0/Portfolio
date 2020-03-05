@@ -14,7 +14,7 @@ import About from "./About";
 import Blog from "./Blog";
 import Community from "./Community";
 import Services from "./Services";
-import Gallary from "./Gallary";
+import Gallery from "./Gallery";
 import Portfolio from "./Portfolio";
 import Skills from "./Skills";
 import Contact from "./Contact";
@@ -92,8 +92,8 @@ let Main = (props) => {
                     <Route path="/services">
                         <Services />
                     </Route>
-                    <Route path="/gallary">
-                        <Gallary />
+                    <Route path="/gallery">
+                        <Gallery />
                     </Route>
                     <Route path="/portfolio">
                         <Portfolio />

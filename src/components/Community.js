@@ -1,13 +1,10 @@
 import React from "react";
 
+const Community = (props) => {
 
-const Community = () => {
-
-    return (
-        <div>
-            Community
-        </div>
-    )
+    return (<div>
+        Community <sub>coming soon</sub>
+    </div>)
 }
 
 export default Community;
