@@ -43,7 +43,7 @@ const useStyles = makeStyles(theme => ({
         backgroundPosition: "top",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
-        height: "50vh",
+        height: "70vh",
         [theme.breakpoints.up("sm")]: {
             height: "100vh"
         }

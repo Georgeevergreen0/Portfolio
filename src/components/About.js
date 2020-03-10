@@ -7,17 +7,8 @@ import Container from '@material-ui/core/Container';
 
 const useStyles = makeStyles(theme => ({
     image: {
-        backgroundImage: `url(${EvergreenChief})`,
-        backgroundPosition: "top",
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-        height: "70vh",
-        [theme.breakpoints.up("sm")]: {
-            height: "60vh",
-        },
-        [theme.breakpoints.up("md")]: {
-            height: "100vh",
-        },
+        display: "block",
+        width: "100%",
     }
 }));
 const About = () => {
@@ -25,7 +16,10 @@ const About = () => {
     return (
         <div>
             <Grid container  >
-                <Grid item xs={12} sm={5} className={classes.image} ></Grid>
+                <Grid item xs={12} sm={5} >
+                    <img src={EvergreenChief} className={classes.image} alt="Evergreen" />
+                </Grid>
+
                 <Grid item xs={12} sm={7} >
                     <Container>
                         <Typography paragraph style={{ fontWeight: "bolder" }} variant="h2">Hi, I'm George</Typography>

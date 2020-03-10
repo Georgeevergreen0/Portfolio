@@ -29,13 +29,11 @@ code {
     monospace;
 }
 
-.Selected {
-  text-decoration: overline !important;
-  color: red !important;
-  font-style: italic;
-  font-weight: bold !important;
-}
-
 .MuiPaper-elevation4 {
   box-shadow: none !important;
+}
+
+
+.MuiPaper-root.MuiDrawer-paper {
+  background-color: black;
 }
