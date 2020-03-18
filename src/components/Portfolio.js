@@ -4,6 +4,7 @@ import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import Typography from '@material-ui/core/Typography';
+import ButtonBase from '@material-ui/core/ButtonBase';
 import ExpansionPanelActions from '@material-ui/core/ExpansionPanelActions';
 import Grid from '@material-ui/core/Grid';
 import Divider from '@material-ui/core/Divider';
@@ -21,14 +22,18 @@ const useStyles = makeStyles(theme => ({
     card: {
         display: "block",
         width: "100%",
-        margin: "0 auto",
         boxShadow: "2px 8px 8px 0 rgba(0, 0, 0, 0.2)",
         padding: "5px",
         borderRadius: "5px",
+    },
+    base: {
+        display: "block",
+        width: "100%",
+        margin: "0 auto",
         [theme.breakpoints.up("sm")]: {
             width: "80%"
         }
-    }
+    },
 }));
 
 let Portfolio = () => {
@@ -57,17 +62,21 @@ let Portfolio = () => {
                                 <Typography paragraph>
                                     Nulla facilisi. Phasellus sollicitudin nulla et quam mattis feugiat. Aliquam eget
                                     maximus est, id dignissim quam.
+                                    <br />
+                                    In progress link is working...
                              </Typography>
                             </Grid>
                             <Grid item xs={12} sm={6}>
-                                <img src={weather} className={classes.card} alt="Weather Application" />
+                                <ButtonBase className={classes.base} component="div" >
+                                    <img src={weather} className={classes.card} alt="Weather Application" />
+                                </ButtonBase>
                             </Grid>
                         </Grid>
                     </ExpansionPanelDetails>
                     <Divider variant="middle" />
                     <ExpansionPanelActions>
-                        <Button size="small">Visit</Button>
-                        <Button size="small" color="primary"> Source</Button>
+                        <Button href="https://weather.georgeevergreen.com" rel="noopener" target="_blank" size="small">Visit</Button>
+                        <Button href="https://github.com/Georgeevergreen0/weather-graph" rel="noopener" target="_blank" size="small" color="primary"> Source</Button>
                     </ExpansionPanelActions>
                 </ExpansionPanel>
 
@@ -85,17 +94,21 @@ let Portfolio = () => {
                                 <Typography paragraph>
                                     Nulla facilisi. Phasellus sollicitudin nulla et quam mattis feugiat. Aliquam eget
                                     maximus est, id dignissim quam.
+                                    <br />
+                                    In progress link is working...
                              </Typography>
                             </Grid>
                             <Grid item xs={12} sm={6}>
-                                <img src={burger} className={classes.card} alt="Burger Application" />
+                                <ButtonBase className={classes.base} component="div">
+                                    <img src={burger} className={classes.card} alt="Burger Application" />
+                                </ButtonBase>
                             </Grid>
                         </Grid>
                     </ExpansionPanelDetails>
                     <Divider variant="middle" />
                     <ExpansionPanelActions>
-                        <Button size="small">Visit</Button>
-                        <Button size="small" color="primary"> Source</Button>
+                        <Button href="https://burger.georgeevergreen.com" rel="noopener" target="_blank" size="small">Visit</Button>
+                        <Button href="https://github.com/Georgeevergreen0/burger-builder" rel="noopener" target="_blank" size="small" color="primary"> Source</Button>
                     </ExpansionPanelActions>
                 </ExpansionPanel>
 
@@ -113,17 +126,21 @@ let Portfolio = () => {
                                 <Typography paragraph>
                                     Nulla facilisi. Phasellus sollicitudin nulla et quam mattis feugiat. Aliquam eget
                                     maximus est, id dignissim quam.
+                                    <br />
+                                    In progress link is working...
                              </Typography>
                             </Grid>
                             <Grid item xs={12} sm={6}>
-                                <img src={portfolio} className={classes.card} alt="Portfolio Site" />
+                                <ButtonBase className={classes.base} component="div">
+                                    <img src={portfolio} className={classes.card} alt="Portfolio Site" />
+                                </ButtonBase>
                             </Grid>
                         </Grid>
                     </ExpansionPanelDetails>
                     <Divider variant="middle" />
                     <ExpansionPanelActions>
-                        <Button size="small">Visit</Button>
-                        <Button size="small" color="primary"> Source</Button>
+                        <Button href="https://georgeevergreen0.github.io" rel="noopener" target="_blank" size="small">Visit</Button>
+                        <Button href="https://github.com/Georgeevergreen0/georgeevergreen0.github.io" rel="noopener" target="_blank" size="small" color="primary"> Source</Button>
                     </ExpansionPanelActions>
                 </ExpansionPanel>
 
@@ -141,10 +158,14 @@ let Portfolio = () => {
                                 <Typography paragraph>
                                     Nulla facilisi. Phasellus sollicitudin nulla et quam mattis feugiat. Aliquam eget
                                     maximus est, id dignissim quam.
+                                    <br />
+                                    In progress link is working...
                              </Typography>
-                                <Grid item xs={12} sm={6}>
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
+                                <ButtonBase className={classes.base} component="div">
                                     <img src={edu} className={classes.card} alt="School Website" />
-                                </Grid>
+                                </ButtonBase>
                             </Grid>
                         </Grid>
                     </ExpansionPanelDetails>
@@ -172,7 +193,9 @@ let Portfolio = () => {
                              </Typography>
                             </Grid>
                             <Grid item xs={12} sm={6}>
-                                <img src={weather} className={classes.card} alt="Weather Application" />
+                                <ButtonBase className={classes.base} component="div">
+                                    <img src={weather} className={classes.card} alt="Weather Application" />
+                                </ButtonBase>
                             </Grid>
                         </Grid>
                     </ExpansionPanelDetails>
@@ -199,7 +222,9 @@ let Portfolio = () => {
                                     maximus est, id dignissim quam.
                              </Typography>
                                 <Grid item xs={12} sm={6}>
-                                    <img src={weather} className={classes.card} alt="Weather Application" />
+                                    <ButtonBase className={classes.base} component="div">
+                                        <img src={weather} className={classes.card} alt="Weather Application" />
+                                    </ButtonBase>
                                 </Grid>
                             </Grid>
                         </Grid>

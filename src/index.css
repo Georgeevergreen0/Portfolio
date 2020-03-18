@@ -32,8 +32,3 @@ code {
 .MuiPaper-elevation4 {
   box-shadow: none !important;
 }
-
-
-.MuiPaper-root.MuiDrawer-paper {
-  background-color: black;
-}
