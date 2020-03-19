@@ -5,7 +5,12 @@ import { NavLink } from "react-router-dom";
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import MenuIcon from '@material-ui/icons/Menu';
-import Drawer from "./ReuseableComponent/Drawer"
+import Drawer from "./ReuseableComponent/Drawer";
+import Button from '@material-ui/core/Button';
+import Linkedin from '@material-ui/icons/LinkedIn';
+import Twitter from '@material-ui/icons/Twitter';
+import GitHub from '@material-ui/icons/GitHub';
+import Instagram from '@material-ui/icons/Instagram';
 
 
 const useStyles = makeStyles(theme => ({
@@ -76,6 +81,23 @@ const Home = (props) => {
                     <Typography paragraph >
                         Need pictures or more about my bio ? {<NavLink to="/about" >Click here</NavLink>}
                     </Typography>
+                    <div>
+                        <Button size="small" to="/contact" component={NavLink} variant="outlined" >
+                            Contact
+                        </Button>
+                        <IconButton href="https://github.com/georgeevergreen0" rel="noopener" target="_blank" >
+                            <GitHub />
+                        </IconButton>
+                        <IconButton href="https://www.linkedin.com/in/georgeevergreen" rel="noopener" target="_blank" >
+                            <Linkedin />
+                        </IconButton>
+                        <IconButton href="https://twitter.com/georgeevergreen" rel="noopener" target="_blank" >
+                            <Twitter />
+                        </IconButton>
+                        <IconButton href="https://instagram.com/georgeevergreen" rel="noopener" target="_blank" >
+                            <Instagram />
+                        </IconButton>
+                    </div>
                 </div>
                 <div className={classes.image}></div>
             </div>

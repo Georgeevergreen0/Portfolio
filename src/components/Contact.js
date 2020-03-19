@@ -24,8 +24,8 @@ import CloseIcon from '@material-ui/icons/Close';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        color: theme.palette.text.hint,
-        backgroundColor: "#eeeeee",
+        color: "#fff",
+        backgroundColor: theme.palette.primary.main,
         borderRadius: 5,
         padding: theme.spacing(5),
         textAlign: "center",

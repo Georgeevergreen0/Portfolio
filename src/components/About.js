@@ -3,12 +3,17 @@ import EvergreenChief from "../asset/images/evergreen-cheif.png";
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from "@material-ui/core/styles";
-import Container from '@material-ui/core/Container';
 
 const useStyles = makeStyles(theme => ({
     image: {
         display: "block",
         width: "100%",
+    },
+    container: {
+        padding: theme.spacing(0),
+        [theme.breakpoints.up("sm")]: {
+            padding: theme.spacing(0, 0, 0, 4),
+        }
     }
 }));
 const About = () => {
@@ -21,7 +26,7 @@ const About = () => {
                 </Grid>
 
                 <Grid item xs={12} sm={7} >
-                    <Container>
+                    <div className={classes.container}>
                         <Typography paragraph style={{ fontWeight: "bolder" }} variant="h2">Hi, I'm George</Typography>
                         <Typography paragraph >My name is Evergreen George Ekene. I fondly like to be called Eky.</Typography>
                         <Typography paragraph >
@@ -43,7 +48,7 @@ const About = () => {
                         <Typography paragraph >
                             My non-tech passion includes education & music. I believe everyone should be given a chance at basic education.
                     </Typography>
-                    </Container>
+                    </div>
                 </Grid>
             </Grid>
         </div>

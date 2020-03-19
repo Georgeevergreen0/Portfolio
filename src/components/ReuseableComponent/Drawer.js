@@ -25,6 +25,7 @@ import Store from '@material-ui/icons/Store';
 import Image from '@material-ui/icons/Image';
 import Style from '@material-ui/icons/Style';
 import Work from '@material-ui/icons/Work';
+import Attachment from '@material-ui/icons/Attachment';
 import Email from '@material-ui/icons/Email';
 
 const darkTheme = createMuiTheme({
@@ -47,9 +48,9 @@ const useStyles = makeStyles((theme) => ({
     fullList: {
         width: '80vw',
         maxWidth: "300px",
-        padding: theme.spacing(3),
+        padding: theme.spacing(2, 3),
         [theme.breakpoints.up("sm")]: {
-            padding: theme.spacing(4)
+            padding: theme.spacing(3, 4)
         }
     },
     center: {
@@ -62,12 +63,13 @@ const useStyles = makeStyles((theme) => ({
     },
     relative: {
         position: "relative",
-        height: "auto"
+        minHeight: "100px",
     },
     absolute: {
         width: "100%",
         position: "absolute",
-        top: "50px",
+        top: "50%",
+        transform: "translateY(-50%)",
         backgroundColor: "rgba(0, 0, 0, 0.3)",
         backdropFilter: "blur(10px)",
     }
@@ -205,6 +207,16 @@ const Drawers = (props) => {
                             </ListItemSecondaryAction>
                         </ListItem>
 
+                        <ListItem to="/resume" button component={NavLink} selected={location.pathname === "/resume"}>
+                            <ListItemIcon>
+                                <Attachment />
+                            </ListItemIcon>
+                            <ListItemText primary="Resume" />
+                            <ListItemSecondaryAction>
+                                {location.pathname === "/resume" ? <ArrowBack fontSize="small" /> : null}
+                            </ListItemSecondaryAction>
+                        </ListItem>
+
                         <ListItem to="/contact" button component={NavLink} selected={location.pathname === "/contact"}>
                             <ListItemIcon>
                                 <Email />
@@ -218,8 +230,8 @@ const Drawers = (props) => {
 
                     <Divider />
                     <br />
-                    <Typography variant="caption" align="center" component="p">
-                        Copyright Evergreen George 2020 ©
+                    <Typography variant="caption" align="center" display="block">
+                        Copyright <br /> © Evergreen George <br /> 2020
                 </Typography>
 
                 </div>

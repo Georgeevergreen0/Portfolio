@@ -17,6 +17,7 @@ import Services from "./Services";
 import Gallery from "./Gallery";
 import Portfolio from "./Portfolio";
 import Skills from "./Skills";
+import Resume from "./Resume";
 import Contact from "./Contact";
 
 
@@ -101,11 +102,19 @@ let Main = (props) => {
                     <Route path="/skills">
                         <Skills />
                     </Route>
+                    <Route path="/resume">
+                        <Resume />
+                    </Route>
                     <Route path="/contact">
                         <Contact />
                     </Route>
                     <Redirect to="/" />
                 </Switch>
+                <br />
+                <br />
+                <Typography variant="caption" align="center" display="block">
+                    Copyright <br /> © Evergreen George <br /> 2020
+                </Typography>
             </div>
         )
     }
