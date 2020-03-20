@@ -1,5 +1,4 @@
 import React from 'react';
-import HackerImage from "../../asset/images/hacker.png"
 import { useHistory, NavLink, useLocation } from "react-router-dom";
 import { makeStyles, ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
@@ -58,21 +57,6 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: "space-between",
         overflowX: "hidden"
     },
-    image: {
-        width: "100%",
-    },
-    relative: {
-        position: "relative",
-        minHeight: "100px",
-    },
-    absolute: {
-        width: "100%",
-        position: "absolute",
-        top: "50%",
-        transform: "translateY(-50%)",
-        backgroundColor: "rgba(0, 0, 0, 0.3)",
-        backdropFilter: "blur(10px)",
-    }
 }));
 
 const Drawers = (props) => {
@@ -109,15 +93,10 @@ const Drawers = (props) => {
                             </IconButton>
                         </div>
 
-                        <div className={classes.relative}>
-                            <img className={classes.image} src={HackerImage} alt="White Hacker" />
-                            <div className={classes.absolute}>
-                                <ThemeProvider theme={Font}>
-                                    <Typography align="center" variant="h5">Evergreen George</Typography>
-                                    <Typography align="center" variant="subtitle2">Senior Web Developer</Typography>
-                                </ThemeProvider>
-                            </div>
-                        </div>
+                        <ThemeProvider theme={Font}>
+                            <Typography align="center" variant="h5">Evergreen George</Typography>
+                            <Typography align="center" variant="subtitle2" paragraph>Senior Software Developer</Typography>
+                        </ThemeProvider>
 
                         <Divider />
                         <div className={classes.center}>

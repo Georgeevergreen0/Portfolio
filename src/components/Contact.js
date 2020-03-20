@@ -23,7 +23,7 @@ import CloseIcon from '@material-ui/icons/Close';
 
 
 const useStyles = makeStyles((theme) => ({
-    root: {
+    heading: {
         color: "#fff",
         backgroundColor: theme.palette.primary.main,
         borderRadius: 5,
@@ -79,11 +79,11 @@ const Contact = () => {
 
     return (
         <>
-            <Typography className={classes.root}>
+            <Typography className={classes.heading}>
                 I'm avalible for freelance work, I want to hear about your projects.
         </Typography>
             <div className={classes.spacing}></div>
-            <Container maxWidth="sm">
+            <Container disableGutters maxWidth="md">
                 <form action="https://formspree.io/xgevdqwv" method="POST" onSubmit={submitHandler}>
                     <Grid container spacing={2}>
                         <Grid item xs={12} sm={6}>

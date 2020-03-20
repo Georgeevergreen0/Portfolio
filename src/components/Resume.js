@@ -9,7 +9,7 @@ import GetApp from '@material-ui/icons/GetApp';
 
 const useStyles = makeStyles(theme => ({
     root: {
-        minHeight: "200px"
+        textAlign: "right",
     },
     image: {
         display: "block",
@@ -18,11 +18,7 @@ const useStyles = makeStyles(theme => ({
         boxShadow: "2px 8px 8px 0 rgba(0, 0, 0, 0.2)",
         padding: "5px",
         borderRadius: "5px",
-    },
-    fab: {
-        position: "fixed",
-        bottom: "20vh",
-        right: "50px",
+        marginBottom: theme.spacing(2)
     }
 }));
 
@@ -31,12 +27,12 @@ const Resume = () => {
     const classes = useStyles();
 
     return (
-        <Container disableGutters className={classes.root}>
+        <Container className={classes.root} disableGutters maxWidth="md">
             <ButtonBase component="div">
                 <img className={classes.image} src={EvergreenImage} alt="Resume" />
             </ButtonBase>
-            <Fab className={classes.fab} download="Evergreen" href={EvergreenDoc} color="primary" aria-label="Download Resume"><GetApp /></Fab>
-        </Container>
+            <Fab download="Evergreen" href={EvergreenDoc} color="primary" aria-label="Download Resume"><GetApp /></Fab>
+        </Container >
     )
 }
 
