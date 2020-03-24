@@ -76,13 +76,13 @@ const Home = (props) => {
                 <div className={classes.body}>
                     <Typography paragraph style={{ fontWeight: "bolder" }} variant="h2">Hi, I'm George</Typography>
                     <Typography paragraph >Hi, my name is Evergreen George Ekene but you can call me Eky. </Typography>
-                    <Typography paragraph >I am a web developer, enthusiastic individual, open source advocate and technical writer based in Anambra,
+                    <Typography paragraph >I am a software developer, open source advocate and technical writer based in Anambra,
                     Nigeria. I am very passionate about education, technology & music.</Typography>
                     <Typography paragraph >
-                        Need pictures or more about my bio ? {<NavLink to="/about" >Click here</NavLink>}
+                        Want to know more about me ? <Button component={NavLink} to="/about" size="small" variant="outlined" >About</Button>
                     </Typography>
                     <div>
-                        <Button size="small" to="/contact" component={NavLink} variant="outlined" >
+                        <Button size="small" to="/contact" color="primary" component={NavLink} variant="contained" >
                             Contact
                         </Button>
                         <IconButton href="https://github.com/georgeevergreen0" rel="noopener" target="_blank" >

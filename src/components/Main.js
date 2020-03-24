@@ -25,6 +25,10 @@ const useStyles = makeStyles(theme => ({
     body: {
         overflowX: "hidden",
         width: "auto",
+        minHeight: "100vh",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
         padding: theme.spacing(3),
         [theme.breakpoints.up("sm")]: {
             padding: theme.spacing(5)
@@ -68,50 +72,52 @@ let Main = (props) => {
         return (
             <div className={classes.body}>
                 <Drawer {...props} />
-                <AppBar position="relative" color="inherit">
-                    <Toolbar disableGutters>
-                        <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu" onClick={toggleDrawer}>
-                            <MenuIcon fontSize="large" />
-                        </IconButton>
-                        <Typography variant="overline" className={classes.title}>
-                            {location.pathname.replace("/", "")}
-                        </Typography>
-                        <Avatar className={classes.avatar} src={evergreen} onClick={navigation.bind(this, "/")} />
-                    </Toolbar>
-                </AppBar>
-                <div className={classes.div}></div>
-                <Switch>
-                    <Route path="/about">
-                        <About />
-                    </Route>
-                    <Route path="/blog">
-                        <Blog />
-                    </Route>
-                    <Route path="/community">
-                        <Community />
-                    </Route>
-                    <Route path="/services">
-                        <Services />
-                    </Route>
-                    <Route path="/gallery">
-                        <Gallery />
-                    </Route>
-                    <Route path="/portfolio">
-                        <Portfolio />
-                    </Route>
-                    <Route path="/skills">
-                        <Skills />
-                    </Route>
-                    <Route path="/resume">
-                        <Resume />
-                    </Route>
-                    <Route path="/contact">
-                        <Contact />
-                    </Route>
-                    <Redirect to="/" />
-                </Switch>
-                <br />
-                <br />
+                <div>
+                    <AppBar position="relative" color="inherit">
+                        <Toolbar disableGutters>
+                            <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu" onClick={toggleDrawer}>
+                                <MenuIcon fontSize="large" />
+                            </IconButton>
+                            <Typography variant="overline" className={classes.title}>
+                                {location.pathname.replace("/", "")}
+                            </Typography>
+                            <Avatar className={classes.avatar} src={evergreen} onClick={navigation.bind(this, "/")} />
+                        </Toolbar>
+                    </AppBar>
+                    <div className={classes.div}></div>
+                    <Switch>
+                        <Route path="/about">
+                            <About />
+                        </Route>
+                        <Route path="/blog">
+                            <Blog />
+                        </Route>
+                        <Route path="/community">
+                            <Community />
+                        </Route>
+                        <Route path="/services">
+                            <Services />
+                        </Route>
+                        <Route path="/gallery">
+                            <Gallery />
+                        </Route>
+                        <Route path="/portfolio">
+                            <Portfolio />
+                        </Route>
+                        <Route path="/skills">
+                            <Skills />
+                        </Route>
+                        <Route path="/resume">
+                            <Resume />
+                        </Route>
+                        <Route path="/contact">
+                            <Contact />
+                        </Route>
+                        <Redirect to="/" />
+                    </Switch>
+                    <br />
+                    <br />
+                </div>
                 <Typography variant="caption" align="center" display="block">
                     Copyright <br /> © Evergreen George <br /> 2020
                 </Typography>

@@ -30,7 +30,7 @@ const About = () => {
                         <Typography paragraph style={{ fontWeight: "bolder" }} variant="h2">Hi, I'm George</Typography>
                         <Typography paragraph >My name is Evergreen George Ekene. I fondly like to be called Eky.</Typography>
                         <Typography paragraph >
-                            I am a web developer, enthusiastic individual, open source advocate and technical writer based in Anambra, Nigeria.
+                            I am a software developer, open source advocate and technical writer based in Anambra, Nigeria.
                             I am very passionate about education, technology & music. I have excellent relationship-building and communication skills,
                             I love to design and create things.
                             I am passionate about Artificial Intelligence, VR experience and developing JAMstack application,  PWA applications and SPA application

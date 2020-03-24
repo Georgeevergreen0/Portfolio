@@ -27,10 +27,9 @@ const useStyles = makeStyles((theme) => ({
         color: "#fff",
         backgroundColor: theme.palette.primary.main,
         borderRadius: 5,
-        padding: theme.spacing(5),
+        padding: theme.spacing(2),
         textAlign: "center",
     },
-    spacing: theme.mixins.toolbar,
     snackbar: {
         backgroundColor: theme.palette.primary.main
     }
@@ -79,10 +78,10 @@ const Contact = () => {
 
     return (
         <>
-            <Typography className={classes.heading}>
+            <Typography className={classes.heading} paragraph>
                 I'm avalible for freelance work, I want to hear about your projects.
-        </Typography>
-            <div className={classes.spacing}></div>
+           </Typography>
+
             <Container disableGutters maxWidth="md">
                 <form action="https://formspree.io/xgevdqwv" method="POST" onSubmit={submitHandler}>
                     <Grid container spacing={2}>

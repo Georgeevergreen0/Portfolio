@@ -48,10 +48,9 @@ const useStyles = makeStyles(theme => ({
         color: "#fff",
         backgroundColor: theme.palette.primary.main,
         borderRadius: 5,
-        padding: theme.spacing(5),
+        padding: theme.spacing(2),
         textAlign: "center",
-    },
-    spacing: theme.mixins.toolbar,
+    }
 }));
 
 let Portfolio = () => {
@@ -64,14 +63,15 @@ let Portfolio = () => {
 
     return (
         <>
-            <Typography className={classes.heading}>
-                For a full list of all my software projects expecially back-end only projects visit my github repository by clicking on the button below.
+            <Typography className={classes.heading} paragraph>
+                For a full list of all my software projects especially back-end only projects visit my github repository by clicking on the button below.
                 <br />
-                <Button startIcon={<GitHub />} size="small" color="primary" variant="contained" href="https://github.com/georgeevergreen0" rel="noopener" target="_blank" >
+                <br />
+                <Button startIcon={<GitHub />} size="small" color="secondary" variant="contained" href="https://github.com/georgeevergreen0" rel="noopener" target="_blank" >
                     click here
                 </Button>
             </Typography>
-            <div className={classes.spacing}></div>
+
             <Container maxWidth="md" disableGutters>
                 <ExpansionPanel expanded={expanded === 'weather'} onChange={handleChange('weather')}>
                     <ExpansionPanelSummary
@@ -96,7 +96,7 @@ let Portfolio = () => {
                                         <li>Mapbox</li>
                                         <li>React</li>
                                         <li>HTML5</li>
-                                        <li>Css3</li>
+                                        <li>CSS3</li>
                                         <li>D3</li>
                                     </ul>
                                 </Typography>
@@ -137,7 +137,7 @@ let Portfolio = () => {
                                         <li>Firebase</li>
                                         <li>React</li>
                                         <li>HTML5</li>
-                                        <li>Css3</li>
+                                        <li>CSS3</li>
                                     </ul>
                                 </Typography>
                             </Grid>
@@ -168,7 +168,7 @@ let Portfolio = () => {
                             <Grid item xs={12} sm={6}>
                                 <Typography component="div" variant="body2" paragraph>
                                     <Typography display="block" className={classes.text} variant="overline">Features</Typography>
-                                    My previous portfolio website No framework with scrollspy, image slider and scroll reveal.
+                                    My previous portfolio website No framework with scrollspy, image carousel and scroll reveal etc.
 
                                     <Typography display="block" className={classes.text} variant="overline">Stack</Typography>
                                     <ul className={classes.list} >
@@ -176,7 +176,7 @@ let Portfolio = () => {
                                         <li>JQuery</li>
                                         <li>HTML5</li>
                                         <li>SASS</li>
-                                        <li>Css3</li>
+                                        <li>CSS3</li>
                                     </ul>
                                 </Typography>
                             </Grid>
@@ -218,7 +218,7 @@ let Portfolio = () => {
                                         <li>gatsby</li>
                                         <li>React</li>
                                         <li>HTML5</li>
-                                        <li>Css3</li>
+                                        <li>CSS3</li>
                                     </ul>
                                 </Typography>
                             </Grid>
