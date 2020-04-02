@@ -53,6 +53,9 @@ const useStyles = makeStyles(theme => ({
             height: "100vh"
         }
     },
+    text: {
+        textTransform: "none",
+    }
 }));
 
 const Home = (props) => {
@@ -79,23 +82,23 @@ const Home = (props) => {
                     <Typography paragraph >I am a software developer, open source advocate and technical writer based in Anambra,
                     Nigeria. I am very passionate about education, technology & music.</Typography>
                     <Typography paragraph >
-                        Want to know more about me ? <Button component={NavLink} to="/about" size="small" variant="outlined" >About</Button>
+                        More about me ? <Button component={NavLink} className={classes.text} to="/about" size="small" >Click Here</Button>
                     </Typography>
                     <div>
-                        <Button size="small" to="/contact" color="primary" component={NavLink} variant="contained" >
+                        <Button size="small" to="/contact" color="primary" component={NavLink} className={classes.text} variant="contained" >
                             Contact
                         </Button>
                         <IconButton href="https://github.com/georgeevergreen0" rel="noopener" target="_blank" >
-                            <GitHub />
+                            <GitHub color="primary" />
                         </IconButton>
                         <IconButton href="https://www.linkedin.com/in/georgeevergreen" rel="noopener" target="_blank" >
-                            <Linkedin />
+                            <Linkedin color="primary" />
                         </IconButton>
                         <IconButton href="https://twitter.com/georgeevergreen" rel="noopener" target="_blank" >
-                            <Twitter />
+                            <Twitter color="primary" />
                         </IconButton>
                         <IconButton href="https://instagram.com/georgeevergreen" rel="noopener" target="_blank" >
-                            <Instagram />
+                            <Instagram color="primary" />
                         </IconButton>
                     </div>
                 </div>

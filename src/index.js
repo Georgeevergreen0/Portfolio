@@ -6,7 +6,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 const Index = () => (
-    <Router forceRefresh>
+    <Router>
         <App />
     </Router>
 )

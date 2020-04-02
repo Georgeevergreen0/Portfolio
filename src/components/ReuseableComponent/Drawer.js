@@ -46,7 +46,7 @@ const Font = createMuiTheme({
 const useStyles = makeStyles((theme) => ({
     fullList: {
         width: '80vw',
-        maxWidth: "300px",
+        maxWidth: "320px",
         padding: theme.spacing(2, 3),
         [theme.breakpoints.up("sm")]: {
             padding: theme.spacing(3, 4)

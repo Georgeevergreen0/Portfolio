@@ -24,35 +24,35 @@
 }
 
 .cube-top {
-    background-image: url(../images/about-html5.webp);
+    background-image: url(../images/skills-html5.png);
     transform: rotateX(90deg) translateZ(100px);
 
 }
 
 .cube-bottom {
-    background-image: url(../images/about-mongodb.webp);
+    background-image: url(../images/skills-mongodb.png);
     transform: rotateX(-90deg) translateZ(100px);
 }
 
 .cube-left {
-    background-image: url(../images/about-react.webp);
+    background-image: url(../images/skills-react.png);
     transform: rotateY(-90deg) translateZ(100px);
 }
 
 .cube-right {
-    background-image: url(../images/about-javascript.webp);
+    background-image: url(../images/skills-javascript.png);
     transform: rotateY(90deg) translateZ(100px);
 
 
 }
 
 .cube-back {
-    background-image: url(../images/about-css3.webp);
+    background-image: url(../images/skills-css3.png);
     transform: rotateY(180deg) translateZ(100px);
 }
 
 .cube-front {
-    background-image: url(../images/about-node.webp);
+    background-image: url(../images/skills-node.png);
     transform: translateZ(100px);
 }
 

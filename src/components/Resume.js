@@ -12,7 +12,7 @@ const useStyles = makeStyles(theme => ({
         textAlign: "right",
     },
     image: {
-        display: "block",
+        display: "inline-block",
         width: "100%",
         height: "auto",
         boxShadow: "2px 8px 8px 0 rgba(0, 0, 0, 0.2)",
@@ -28,11 +28,11 @@ const Resume = () => {
 
     return (
         <Container className={classes.root} disableGutters maxWidth="md">
-            <ButtonBase component="div">
+            <ButtonBase style={{ width: "100%" }} component="div">
                 <img className={classes.image} src={EvergreenImage} alt="Resume" />
             </ButtonBase>
             <Fab download="Evergreen" href={EvergreenDoc} color="primary" aria-label="Download Resume"><GetApp /></Fab>
-        </Container >
+        </Container>
     )
 }
 
