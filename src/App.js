@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-//import { useLocation, Switch, Route } from "react-router-dom";
-import Main from "./components/Main";
+import React from 'react';
+import Layout from "./Layout/Layout";
+import Pages, { Home } from "./Pages";
 
-let App = (props) => {
-  const [drawerState, setDrawerState] = useState(false);
+let App = () => {
   return (
-    <Main drawerState={drawerState} setDrawerState={setDrawerState} />
+    <Layout Home={Home}>
+      <Pages />
+    </Layout>
   )
-
 }
 
 export default App;

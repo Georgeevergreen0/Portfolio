@@ -3,9 +3,9 @@ import { makeStyles } from '@material-ui/core/styles';
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
+import ExpansionPanelActions from '@material-ui/core/ExpansionPanelActions';
 import Typography from '@material-ui/core/Typography';
 import ButtonBase from '@material-ui/core/ButtonBase';
-import ExpansionPanelActions from '@material-ui/core/ExpansionPanelActions';
 import Grid from '@material-ui/core/Grid';
 import Divider from '@material-ui/core/Divider';
 import Button from '@material-ui/core/Button';
@@ -19,8 +19,12 @@ import portfolio from "../asset/images/portfolio-portfolio.png";
 import edu from "../asset/images/portfolio-edu.png";
 
 const useStyles = makeStyles(theme => ({
-    root: {
-        width: '100%',
+    heading: {
+        color: "#fff",
+        backgroundColor: theme.palette.primary.main,
+        borderRadius: 5,
+        padding: theme.spacing(2),
+        textAlign: "center",
     },
     card: {
         display: "block",
@@ -44,12 +48,8 @@ const useStyles = makeStyles(theme => ({
         listStyleType: "circle",
         listStylePosition: "inside"
     },
-    heading: {
-        color: "#fff",
-        backgroundColor: theme.palette.primary.main,
-        borderRadius: 5,
-        padding: theme.spacing(2),
-        textAlign: "center",
+    expansionPanel: {
+        backgroundColor: '#fff',
     }
 }));
 
@@ -72,8 +72,8 @@ let Portfolio = () => {
                 </Button>
             </Typography>
 
-            <Container maxWidth="md" disableGutters>
-                <ExpansionPanel expanded={expanded === 'weather'} onChange={handleChange('weather')}>
+            <Container maxWidth="md" disableGutters >
+                <ExpansionPanel expanded={expanded === 'weather'} onChange={handleChange('weather')} className={classes.expansionPanel}>
                     <ExpansionPanelSummary
                         expandIcon={<ExpandMoreIcon />}
                         aria-controls="weather"
@@ -115,7 +115,7 @@ let Portfolio = () => {
                     </ExpansionPanelActions>
                 </ExpansionPanel>
 
-                <ExpansionPanel expanded={expanded === 'burger'} onChange={handleChange('burger')}>
+                <ExpansionPanel expanded={expanded === 'burger'} onChange={handleChange('burger')} className={classes.expansionPanel}>
                     <ExpansionPanelSummary
                         expandIcon={<ExpandMoreIcon />}
                         aria-controls="burger"
@@ -155,7 +155,7 @@ let Portfolio = () => {
                     </ExpansionPanelActions>
                 </ExpansionPanel>
 
-                <ExpansionPanel expanded={expanded === 'portfolio'} onChange={handleChange('portfolio')}>
+                <ExpansionPanel expanded={expanded === 'portfolio'} onChange={handleChange('portfolio')} className={classes.expansionPanel}>
                     <ExpansionPanelSummary
                         expandIcon={<ExpandMoreIcon />}
                         aria-controls="portfolio"
@@ -194,7 +194,7 @@ let Portfolio = () => {
                     </ExpansionPanelActions>
                 </ExpansionPanel>
 
-                <ExpansionPanel expanded={expanded === 'edu'} onChange={handleChange('edu')}>
+                <ExpansionPanel expanded={expanded === 'edu'} onChange={handleChange('edu')} className={classes.expansionPanel}>
                     <ExpansionPanelSummary
                         expandIcon={<ExpandMoreIcon />}
                         aria-controls="edu"
@@ -236,7 +236,7 @@ let Portfolio = () => {
                     </ExpansionPanelActions>
                 </ExpansionPanel>
 
-                <ExpansionPanel disabled={true} expanded={expanded === 'w'} onChange={handleChange('w')}>
+                <ExpansionPanel disabled={true} expanded={expanded === 'w'} onChange={handleChange('w')} className={classes.expansionPanel}>
                     <ExpansionPanelSummary
                         expandIcon={<ExpandMoreIcon />}
                         aria-controls="weather"
@@ -266,7 +266,7 @@ let Portfolio = () => {
                     </ExpansionPanelActions>
                 </ExpansionPanel>
 
-                <ExpansionPanel disabled={true} expanded={expanded === 'w'} onChange={handleChange('w')}>
+                <ExpansionPanel disabled={true} expanded={expanded === 'w'} onChange={handleChange('w')} className={classes.expansionPanel}>
                     <ExpansionPanelSummary
                         expandIcon={<ExpandMoreIcon />}
                         aria-controls="weather"

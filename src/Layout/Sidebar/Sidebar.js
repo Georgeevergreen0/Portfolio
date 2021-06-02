@@ -59,29 +59,32 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-const Drawers = (props) => {
+const Sidebar = (props) => {
     const classes = useStyles();
     const history = useHistory();
     const location = useLocation();
-    let { drawerState, setDrawerState } = props;
+    const { sideBarIsOpen, setSideBarIsOpen } = props;
 
-    let toggleDrawer = (event) => {
+    const closeSidebar = (event) => {
         if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
             return;
         }
-        setDrawerState(false);
+        setSideBarIsOpen(false);
     }
 
     let navigation = (path) => {
         history.push(path)
     }
+
     return (
         <ThemeProvider theme={darkTheme} >
-            <Drawer open={drawerState} onClose={toggleDrawer}>
-                <div className={classes.fullList}
+            <Drawer open={sideBarIsOpen} onClose={closeSidebar}>
+                <div
+                    className={classes.fullList}
                     role="presentation"
-                    onClick={toggleDrawer}
-                    onKeyDown={toggleDrawer}>
+                    onClick={closeSidebar}
+                    onKeyDown={closeSidebar}
+                >
                     <List component="nav" aria-label="Navigation">
 
                         <div className={classes.center}>
@@ -206,16 +209,14 @@ const Drawers = (props) => {
                             </ListItemSecondaryAction>
                         </ListItem>
                     </List>
-
                     <Divider />
                     <br />
                     <Typography variant="caption" align="center" display="block">
-                        Copyright <br /> © Evergreen George <br /> 2020
+                        Copyright <br /> © Evergreen George <br /> 2021
                 </Typography>
-
                 </div>
             </Drawer>
-        </ThemeProvider >
+        </ThemeProvider>
     );
 }
-export default Drawers;
+export default Sidebar;

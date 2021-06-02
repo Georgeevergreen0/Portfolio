@@ -3,7 +3,7 @@ import React from "react";
 const Community = (props) => {
 
     return (<div>
-        Community <sub>coming soon</sub>
+        <sub>coming soon</sub>
     </div>)
 }
 
