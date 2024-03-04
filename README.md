@@ -1,10 +1,3 @@
-# Graphql NodeJS Server and Apollo Client.
+# Personal Portfolio
 
-```sh
-git clone https://github.com/Georgeevergreen0/eventBook.git EventBook
-
-cd EventBook/Server
-
-npm install
-
-```
+[https://www.georgeevergreen.com](https://wwww.georgeevergreen.com)
