@@ -1,45 +1,55 @@
-import React from 'react';
-import { Switch, Route, Redirect } from "react-router-dom";
-import Home from "./Home";
-import About from "./About";
-import Blog from "./Blog";
-import Community from "./Community";
-import Services from "./Services";
-import Gallery from "./Gallery";
-import Portfolio from "./Portfolio";
-import Skills from "./Skills";
-import Resume from "./Resume";
-import Contact from "./Contact";
+import React, { useEffect } from 'react';
+import { Switch, Route, Redirect, useLocation } from "react-router-dom";
+import Home from "./Home/Home";
+import About from "./About/About";
+import Blog from "./Blog/Blog";
+import Community from "./Community/Community";
+import Services from "./Services/Services";
+import Gallery from "./Gallery/Gallery";
+import Portfolio from "./Portfolio/Portfolio";
+import Skills from "./Skills/Skills";
+import Resume from "./Resume/Resume";
+import Contact from "./Contact/Contact";
 
 
-let Pages = () => {
+const Pages = () => {
+    const location = useLocation();
+
+    useEffect(() => {
+        // 👇️ scroll to top on page change
+        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    }, [location.pathname])
+
     return (
         <Switch>
-            <Route path="/about">
+            <Route exact path="/" >
+                <Home />
+            </Route>
+            <Route exact path="/about">
                 <About />
             </Route>
-            <Route path="/blog">
+            <Route exact path="/blog">
                 <Blog />
             </Route>
-            <Route path="/community">
+            <Route exact path="/community">
                 <Community />
             </Route>
-            <Route path="/services">
+            <Route exact path="/services">
                 <Services />
             </Route>
-            <Route path="/gallery">
+            <Route exact path="/gallery">
                 <Gallery />
             </Route>
-            <Route path="/portfolio">
+            <Route exact path="/portfolio">
                 <Portfolio />
             </Route>
-            <Route path="/skills">
+            <Route exact path="/skills">
                 <Skills />
             </Route>
-            <Route path="/resume">
+            <Route exact path="/resume">
                 <Resume />
             </Route>
-            <Route path="/contact">
+            <Route exact path="/contact">
                 <Contact />
             </Route>
             <Redirect to="/" />
@@ -49,4 +59,3 @@ let Pages = () => {
 }
 
 export default Pages;
-export { Home };

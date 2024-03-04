@@ -7,13 +7,16 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
-import evergreen from "./../../asset/images/evergreen.png";
+import evergreen from "asset/images/office/profile_photo.jpg";
 
 
 const useStyles = makeStyles(theme => ({
     root: {
-        flexGrow: 1,
-        backgroundColor: "#fff"
+        backgroundColor: "#fff",
+        padding: theme.spacing(3),
+        [theme.breakpoints.up("sm")]: {
+            padding: theme.spacing(5)
+        },
     },
     menuButton: {
         marginRight: theme.spacing(2),
@@ -28,22 +31,22 @@ const useStyles = makeStyles(theme => ({
         fontSize: theme.typography.pxToRem(15),
         color: theme.palette.text.secondary,
     },
-    div: theme.mixins.toolbar,
+    toolbar: theme.mixins.toolbar,
 }));
 
-let Header = (props) => {
-    let classes = useStyles();
-    let location = useLocation()
-    let history = useHistory()
-    let { openSidebar } = props;
+const Header = (props) => {
+    const classes = useStyles();
+    const location = useLocation()
+    const history = useHistory()
+    const { openSidebar } = props;
 
-    let navigation = (path) => {
+    const navigation = (path) => {
         history.push(path)
     }
 
     return (
         <>
-            <AppBar position="relative" color="inherit" className={classes.root}>
+            <AppBar position="sticky" color="inherit" className={classes.root}>
                 <Toolbar disableGutters>
                     <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu" onClick={openSidebar}>
                         <MenuIcon fontSize="large" />
@@ -54,7 +57,7 @@ let Header = (props) => {
                     <Avatar className={classes.avatar} src={evergreen} onClick={navigation.bind(this, "/")} />
                 </Toolbar>
             </AppBar>
-            <div className={classes.div}></div>
+            <div className={classes.toolbar}></div>
         </>
     )
 }

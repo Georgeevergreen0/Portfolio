@@ -1,10 +1,10 @@
 import React from 'react';
 import Layout from "./Layout/Layout";
-import Pages, { Home } from "./Pages";
+import Pages from "./Pages";
 
 let App = () => {
   return (
-    <Layout Home={Home}>
+    <Layout>
       <Pages />
     </Layout>
   )
